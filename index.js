@@ -2,10 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const userRoutes = require('./routes/user');
-const cartRoutes = require('./routes/cart');
-const productRoutes = require('./routes/products');
-const orderRoutes = require('./routes/orders');
+const userRoutes = require('./routes/api/user');
+const cartRoutes = require('./routes/api/cart');
+const productRoutes = require('./routes/api/products');
+const orderRoutes = require('./routes/api/orders');
 
 const app = express();
 
@@ -30,3 +30,4 @@ app.get('/', (req, res) => res.send('Artisans Connect API is running...'));
 // Render requires an active listener
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+
