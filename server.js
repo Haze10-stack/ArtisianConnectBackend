@@ -9,15 +9,7 @@ const PORT = 3000;
 const MONGO_URI ='mongodb+srv://jadhavparth2626_db_user:ParthJ2602@cluster0.0vudh4r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 // ✅ CORS Middleware
-const allowedOrigins = [
-  'https://artisian-connect-frontend.vercel.app',
-  'http://localhost:5500',
-  'http://localhost:5173',
-  'http://127.0.0.1:5500',
-  'http://localhost:3000',
-  'null',
-  'https://artisian-connect-frontend-git-main-nihar1604s-projects.vercel.app'
-];
+const allowedOrigins = ['*'];
 
 const corsOptions = {
   origin: function (origin, callback) {
